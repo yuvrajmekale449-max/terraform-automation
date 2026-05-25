@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    options {
+        timeout(time: 30, unit: 'MINUTES')
+    }
     parameters {
         choice(
             name: 'ACTION',
